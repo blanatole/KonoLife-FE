@@ -12,6 +12,9 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 import ProductItem from "../../Components/ProductItem";
 import HomeCat from "../../Components/HomeCat";
+import newsLetterImg from '../../assets/images/coupon.png';
+import { GoMail } from "react-icons/go";
+
 
 
 const Home = () => {
@@ -29,6 +32,8 @@ const Home = () => {
       <HomeBanner />
 
       <HomeCat />
+
+      {/* Product Section */}
 
       <section className="homeProducts">
         <div className="container">
@@ -144,6 +149,35 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+
+      {/* News Letter Section */}
+
+      <section className="newsLetterSection mt-3 mb-3 d-flex align-items-center">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6">
+              <p className="text-white mb-1">$20 discount for your first order.</p>
+              <h3 className="text-white">Join our newsletter and get...</h3>
+              <p className="text-light">Join our email subscription now to get updates on <br />promotions and coupons.</p>
+
+              <form>
+                <GoMail/>
+                <input type="text" placeholder="Your email address"/>
+                <Button>Subcribe</Button>
+              </form>
+
+
+            </div>
+
+            <div className="col-md-6">
+              <img src={newsLetterImg} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+
     </>
   )
 }
