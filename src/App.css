@@ -789,3 +789,54 @@ footer .topInfo .col span {
   font-size: 14px;
   font-weight: 600;
 }
+
+footer .linksWrap h5 {
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+footer .linksWrap ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+footer .linksWrap ul li a {
+  color: #71778e;
+  font-size: 14px;
+}
+
+footer .linksWrap ul li a:hover {
+  text-decoration: none;
+}
+
+footer .copyright p {
+  display: flex;
+  align-items: center;
+  color: #9b9bb4;
+}
+
+footer .copyright ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 5px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  transition: all 0.2s;
+}
+
+footer .copyright ul li a:hover {
+  border-color: #2bbef9 !important;
+}
+
+footer .copyright ul li a:hover svg {
+  color: #2bbef9 !important
+}
+
+footer .copyright ul li a svg {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.8);
+}
