@@ -11,6 +11,8 @@
 body {
   font-family: "Lato", sans-serif;
   font-size: 14px;
+  overflow-x: hidden;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 
@@ -441,6 +443,7 @@ nav .navPart2 ul li:hover .submenu {
 }
 
 /* Slide Banner */
+
 .homeBannerSection {
   position: relative;
   overflow: hidden;
@@ -459,34 +462,37 @@ nav .navPart2 ul li:hover .submenu {
   justify-content: center;
   width: 40px !important;
   height: 40px !important;
-  background: #444444;
+  background: #fff;
   border-radius: 100%;
   font-family: FontAwesome !important;
   font-weight: bold ;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%) !important;
 }
 
 .homeBannerSection .slick-arrow.slick-next {
-  right: 25px !important;
+  right: 35px !important;
 }
 
 .homeBannerSection .slick-arrow.slick-prev {
-  left: 25px !important;
+  left: 35px !important;
 }
 
-.homeBannerSection .slick-arrow.slick-next::before {
+.slick-next:before, .slick-prev:before {
+  color: #000 !important;
   font-family: FontAwesome !important;
-  color: #fff;
-}
-
-.homeBannerSection .slick-arrow.slick-prev::before {
-  font-family: FontAwesome !important;
-  color: #fff;
+  opacity: 0.8;
 }
 
 /* homeProducts */
 .homeProducts {
   padding: 25px 0px;
   width: 100%;
+}
+
+.sticky {
+  position: sticky;
+  top: 10px;
+  z-index: 100;
 }
 
 .homeProducts .banner {
@@ -496,9 +502,10 @@ nav .navPart2 ul li:hover .submenu {
 }
 
 /* products row */
-.productRow .hd {
-  font-size: 25px;
+.hd {
+  font-size: 22px;
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 .viewAllBtn {
@@ -517,7 +524,7 @@ nav .navPart2 ul li:hover .submenu {
 
 /* product Item */
 
-.product_row .slick-arrow {
+/* .product_row .slick-arrow {
   position: absolute;
   top: 45%;
   z-index: 100;
@@ -538,14 +545,140 @@ nav .navPart2 ul li:hover .submenu {
 .product_row .slick-arrow.slick-prev::before {
   font-size: 25px;
   color: #000;
+} */
+
+.product_row .productItem {
+  border-right: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.product_row .swiper-slide:last-child .productItem {
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.swiper {
+  padding-right: 1px !important;
 }
 
 .productItem {
   width: 100%;
   height: auto;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  position:relative;
 }
 
+.productItem .badge {
+  display: inline-block;
+  padding: 7px 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+}
 
+.productItem .badge-primary {
+  background: #2bbef9 !important;
+}
 
+.productItem .info {
+  padding: 15px;
+}
 
+.productItem .info h4 {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.productItem .info .oldPrice {
+  font-size: 16px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.2);
+  text-decoration: line-through;
+}
+
+.productItem .info .newPrice {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.productItem .actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 20px;
+  right: -100%;
+  z-index: 100;
+  transition: all 0.3s ease-in-out;
+}
+
+.productItem .imgWrapper {
+  overflow: hidden;
+}
+
+.productItem .imgWrapper:hover .actions {
+  opacity: 1;
+  right: 10px;
+}
+
+.productItem .actions button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px !important;
+  height: 40px !important;
+  width: 40px !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-radius: 50% !important;
+  background: #fff !important;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%) !important;
+  transition: all 0.1s !important;
+}
+
+.productItem .actions button svg {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 18px !important;
+  pointer-events: none;
+}
+
+.productItem .actions button:hover {
+  background: #233a95 !important;
+}
+
+.productItem .actions button:hover svg {
+  color: #fff !important;
+}
+
+/* Home Cat */
+
+.homeCat {
+  padding: 35px 0px;
+}
+
+.homeCat .swiper .item {
+  padding: 15px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.homeCat .swiper .item img {
+  width: 80%;
+}
+
+/* New product */
+.productRow2 {
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.productRow2 .productItem {
+  width: 24%;
+  overflow: hidden;
+  border-right: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Banner Sec */
+.bannerSec {
+  gap: 15px;
+}
