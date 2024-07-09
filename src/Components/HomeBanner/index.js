@@ -16,21 +16,23 @@ const HomeBanner = () => {
 
   return (
     <>
-      <div className="homeBannerSection">
-        <Slider {...settings}>
-          <div className="item">
-            <img src={SlideBanner1} className="w-100" />
-          </div>
-          <div className="item">
-            <img src={SlideBanner2} className="w-100" />
-          </div>
-          <div className="item">
-            <img src={SlideBanner1} className="w-100" />
-          </div>
-          <div className="item">
-            <img src={SlideBanner2} className="w-100" />
-          </div>
-        </Slider>
+      <div className="container mt-3">
+        <div className="homeBannerSection">
+          <Slider {...settings}>
+            <div className="item">
+              <img src={SlideBanner1} className="w-100" />
+            </div>
+            <div className="item">
+              <img src={SlideBanner2} className="w-100" />
+            </div>
+            <div className="item">
+              <img src={SlideBanner1} className="w-100" />
+            </div>
+            <div className="item">
+              <img src={SlideBanner2} className="w-100" />
+            </div>
+          </Slider>
+        </div>
       </div>
     </>
   )

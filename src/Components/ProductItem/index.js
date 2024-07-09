@@ -5,6 +5,7 @@ import product1 from "../../assets/images/product1.jpg";
 import { IoIosHeartEmpty } from "react-icons/io";
 
 const ProductItem = () => {
+
   return (
     <>
       <div className="item productItem">
@@ -12,7 +13,6 @@ const ProductItem = () => {
           <img src={product1} className="w-100" />
           <span className="badge badge-primary">28%</span>
           <div className="actions">
-            <Button><AiOutlineFullscreen /></Button>
             <Button><IoIosHeartEmpty /></Button>
           </div>
         </div>

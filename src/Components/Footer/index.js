@@ -47,7 +47,7 @@ const Footer = () => {
             </div>
 
             <div className="col">
-              <h5>FRUIT & VEGETABLES</h5>
+              <h5>BREAKFAST & DAIRY</h5>
               <ul>
                 <li><Link to="#">Fresh Vegetables</Link></li>
                 <li><Link to="#">Herbs & Seasonings</Link></li>
@@ -60,7 +60,7 @@ const Footer = () => {
             </div>
 
             <div className="col">
-              <h5>FRUIT & VEGETABLES</h5>
+              <h5>MEAT & SEAFOOD</h5>
               <ul>
                 <li><Link to="#">Fresh Vegetables</Link></li>
                 <li><Link to="#">Herbs & Seasonings</Link></li>
@@ -73,7 +73,7 @@ const Footer = () => {
             </div>
 
             <div className="col">
-              <h5>FRUIT & VEGETABLES</h5>
+              <h5>BEVERAGES</h5>
               <ul>
                 <li><Link to="#">Fresh Vegetables</Link></li>
                 <li><Link to="#">Herbs & Seasonings</Link></li>
@@ -86,7 +86,7 @@ const Footer = () => {
             </div>
 
             <div className="col">
-              <h5>FRUIT & VEGETABLES</h5>
+              <h5>BREADS & BAKERY</h5>
               <ul>
                 <li><Link to="#">Fresh Vegetables</Link></li>
                 <li><Link to="#">Herbs & Seasonings</Link></li>
