@@ -108,7 +108,7 @@ const Navigation = () => {
                 <li className='list-inline-item'><Link to='/'><Button>Kids</Button></Link></li>
                 <li className='list-inline-item'><Link to='/'><Button>Gifts</Button></Link></li>
                 <li className='list-inline-item'><Link to='/'><Button>Blog</Button></Link></li>
-                <li className='list-inline-item'><Link to='/'><Button>Contact</Button></Link></li>
+                <li className='list-inline-item'><Link to='/contact'><Button>Contact</Button></Link></li>
               </ul>
             </div>
           </div>

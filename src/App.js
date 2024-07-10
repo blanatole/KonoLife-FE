@@ -7,30 +7,31 @@ import { createContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import Footer from './Components/Footer';
 import Listing from './Pages/Listing';
+ // Đảm bảo đường dẫn đúng
+ import Contact from './Pages/Contact/contact';
 
 const MyContext = createContext();
 
 function App() {
-
   const [countryList, setCountryList] = useState([]);
-  const [selectedCountry, setselectedCountry] = useState('');
+  const [selectedCountry, setSelectedCountry] = useState('');
 
   useEffect(() => {
     getCountry("https://countriesnow.space/api/v0.1/countries");
   }, []);
 
-  const getCountry = async(url) => {
-    const responsive = await axios.get(url).then((res) => {
+  const getCountry = async (url) => {
+    const response = await axios.get(url).then((res) => {
       setCountryList(res.data.data);
       console.log(res.data.data);
     });
-  }
+  };
 
   const values = {
     countryList,
-    setselectedCountry,
-    selectedCountry
-  }
+    setSelectedCountry,
+    selectedCountry,
+  };
 
   return (
     <BrowserRouter>
@@ -38,11 +39,13 @@ function App() {
         <Header />
 
         <Routes>
-          <Route path='/' exact={true} element={<Home />} />
-          <Route path='/cat/:id' exact={true} element={<Listing />} />
+          <Route path='/' exact element={<Home />} />
+          <Route path='/cat/:id' exact element={<Listing />} />
+          <Route path='contact' exact element={<Contact />} />
+
         </Routes>
 
-        <Footer/>
+        <Footer />
       </MyContext.Provider>
     </BrowserRouter>
   );
@@ -50,4 +53,4 @@ function App() {
 
 export default App;
 
-export { MyContext }
+export { MyContext };
